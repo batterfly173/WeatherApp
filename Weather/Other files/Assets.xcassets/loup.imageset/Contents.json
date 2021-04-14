@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "loup-1.svg",
+      "filename" : "loup.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "loup-2.svg",
+      "filename" : "loup-1.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "loup-3.svg",
+      "filename" : "loup-2.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

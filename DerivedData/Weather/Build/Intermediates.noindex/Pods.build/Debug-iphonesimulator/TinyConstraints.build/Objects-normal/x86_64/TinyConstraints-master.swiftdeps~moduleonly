@@ -1,0 +1,11 @@
+version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
+options: "6b447b46f3e3a262d7059323a81ca973"
+build_time: [1618432328, 879184000]
+inputs:
+  "/Users/evgeny/source/WeatherApp/Pods/TinyConstraints/TinyConstraints/Classes/Abstraction.swift": [1618390252, 82860720]
+  "/Users/evgeny/source/WeatherApp/Pods/TinyConstraints/TinyConstraints/Classes/Constrainable.swift": [1618390252, 85765498]
+  "/Users/evgeny/source/WeatherApp/Pods/TinyConstraints/TinyConstraints/Classes/Constraints.swift": [1618390252, 81626314]
+  "/Users/evgeny/source/WeatherApp/Pods/TinyConstraints/TinyConstraints/Classes/Stack.swift": [1618390252, 82195918]
+  "/Users/evgeny/source/WeatherApp/Pods/TinyConstraints/TinyConstraints/Classes/TinyConstraints+superview.swift": [1618390252, 84170822]
+  "/Users/evgeny/source/WeatherApp/Pods/TinyConstraints/TinyConstraints/Classes/TinyConstraints.swift": [1618390252, 84981115]
+  "/Users/evgeny/source/WeatherApp/Pods/TinyConstraints/TinyConstraints/Classes/TinyEdgeInsets.swift": [1618390252, 83516989]

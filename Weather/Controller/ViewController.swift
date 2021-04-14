@@ -1,4 +1,5 @@
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController, ChangeCityNameProtocol
 {
@@ -12,16 +13,31 @@ class ViewController: UIViewController, ChangeCityNameProtocol
     
     private var alert = SearchAlert()
     
+    lazy var locationManager: CLLocationManager =
+        {
+            let lm = CLLocationManager()
+            lm.delegate = self
+            lm.desiredAccuracy = kCLLocationAccuracyKilometer
+            lm.requestWhenInUseAuthorization()
+            
+            return lm
+        }()
+    
     @IBAction func searchButtonTapped()
     {
         alert.delegateForCityName = self
-        alert.showAlert(inView: self.view)
+        alert.showAlert(inView: &self.view)
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
     
+        if CLLocationManager.locationServicesEnabled()
+        {
+            locationManager.requestLocation()
+        }
+        
         changeCityName(newName: "London")
     }
     
@@ -63,6 +79,30 @@ class ViewController: UIViewController, ChangeCityNameProtocol
         
         self.weatherImage.image = UIImage(systemName: imageName)
         self.backgroundImage.image = UIImage(named: backGroundImageName)
+    }
+}
+
+extension ViewController: CLLocationManagerDelegate
+{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        guard let location = locations.last else { return }
+        
+        let latitude = location.coordinate.latitude
+        let longitude = location.coordinate.longitude
+        
+        datafetcher.fetchData(latitude: latitude, longitude: longitude)
+        { (currentWeather) in
+            DispatchQueue.main.async
+            {
+                self.updateInterface(currentWeather: currentWeather)
+            }
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
+    {
+        print("error")
     }
 }
 

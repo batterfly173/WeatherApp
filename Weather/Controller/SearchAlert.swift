@@ -13,6 +13,7 @@ class SearchAlert: UIView
     private var searchTextFiled = UITextField()
     private var findButton = UIButton()
     var delegateForCityName: ChangeCityNameProtocol?
+    private var blur = VisualEffect()
     
     private var isShowing = false
     
@@ -20,11 +21,11 @@ class SearchAlert: UIView
     {
         super.init(frame: CGRect.zero)
         
-        self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5)
+        self.backgroundColor = #colorLiteral(red: 0.6881917785, green: 0.6881917785, blue: 0.6881917785, alpha: 0.7312178938)
         
         self.layer.borderWidth = 1
-        self.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        self.layer.cornerRadius = 7
+        self.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        self.layer.cornerRadius = 15
         
         self.addSubview(label)
         self.addSubview(searchTextFiled)
@@ -33,20 +34,23 @@ class SearchAlert: UIView
         searchTextFiled.delegate = self
     }
     
-    func showAlert(inView view: UIView)
+    func showAlert(inView view: inout UIView)
     {
         if !isShowing
         {
+            blur.configurateVisualEffect(view: &view)
             isShowing = true
             configurate(inView: view)
         }
         
+        blur.isHidden = false
         self.isHidden = false
     }
     
     func hideAlert()
     {
         self.isHidden = true
+        blur.isHidden = true
     }
     
     private func configurate(inView view: UIView)
@@ -98,16 +102,17 @@ class SearchAlert: UIView
         searchTextFiled.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         searchTextFiled.layer.borderWidth = 1
-        searchTextFiled.layer.cornerRadius = 5
+        searchTextFiled.layer.cornerRadius = 10
         
-        searchTextFiled.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        searchTextFiled.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        searchTextFiled.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         searchTextFiled.font = UIFont(name: "DIN Condensed", size: 20)
         searchTextFiled.textAlignment = .center
     }
     
     @objc func buttonTapped()
     {
-        self.isHidden = true
+        hideAlert()
         let cityName = searchTextFiled.text!.split(separator: " ").joined(separator: "%20")
         delegateForCityName?.changeCityName(newName: cityName)
     }
