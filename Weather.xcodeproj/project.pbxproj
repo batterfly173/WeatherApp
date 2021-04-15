@@ -21,6 +21,7 @@
 		5CC3B51E261E59B00062DC07 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3B51D261E59B00062DC07 /* WeatherTests.swift */; };
 		5CC3B529261E59B00062DC07 /* WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3B528261E59B00062DC07 /* WeatherUITests.swift */; };
 		5CC3B542261E66790062DC07 /* SearchAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3B541261E66790062DC07 /* SearchAlert.swift */; };
+		5CD028F22628ED1200D2251D /* loupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD028F12628ED1200D2251D /* loupButton.swift */; };
 		5CD7F1C626277A7100E3FEE0 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD7F1C526277A7100E3FEE0 /* Blur.swift */; };
 		6062FC8D66963ABD162DD890 /* Pods_Weather_WeatherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD54CCE6EA1426A8D87772DA /* Pods_Weather_WeatherUITests.framework */; };
 		7D02605244741E74620266A3 /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B30A7183BC29389DA53558 /* Pods_Weather.framework */; };
@@ -68,6 +69,7 @@
 		5CC3B528261E59B00062DC07 /* WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUITests.swift; sourceTree = "<group>"; };
 		5CC3B52A261E59B00062DC07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CC3B541261E66790062DC07 /* SearchAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAlert.swift; sourceTree = "<group>"; };
+		5CD028F12628ED1200D2251D /* loupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loupButton.swift; sourceTree = "<group>"; };
 		5CD7F1C526277A7100E3FEE0 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		707397C686DE97B432F3A51D /* Pods_WeatherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70FCC5BC6830AE4394EC0CFE /* Pods-Weather-WeatherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-WeatherUITests.release.xcconfig"; path = "Target Support Files/Pods-Weather-WeatherUITests/Pods-Weather-WeatherUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				5CC3B507261E59AF0062DC07 /* ViewController.swift */,
 				5CC3B541261E66790062DC07 /* SearchAlert.swift */,
 				5CD7F1C526277A7100E3FEE0 /* Blur.swift */,
+				5CD028F12628ED1200D2251D /* loupButton.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				5CC3B504261E59AF0062DC07 /* AppDelegate.swift in Sources */,
 				5C1020E72626F6490091948C /* DataFetcher.swift in Sources */,
 				5C1020FA262708410091948C /* CurrentWeather.swift in Sources */,
+				5CD028F22628ED1200D2251D /* loupButton.swift in Sources */,
 				5C1020ED2627048E0091948C /* Constants.swift in Sources */,
 				5CC3B506261E59AF0062DC07 /* SceneDelegate.swift in Sources */,
 				5C1020F5262705A20091948C /* Decoder.swift in Sources */,
